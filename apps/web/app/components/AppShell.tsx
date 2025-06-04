@@ -12,10 +12,6 @@ import { useDisclosure } from "@mantine/hooks";
 import { usePathname, useRouter } from "next/navigation";
 import {
   IconHome2,
-<<<<<<< HEAD
-  IconLayoutDashboard,
-=======
->>>>>>> ca38e08 (change the namez)
   IconTableColumn,
 } from "@tabler/icons-react";
 import React from "react";
