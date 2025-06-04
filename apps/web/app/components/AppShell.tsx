@@ -12,7 +12,10 @@ import { useDisclosure } from "@mantine/hooks";
 import { usePathname, useRouter } from "next/navigation";
 import {
   IconHome2,
+<<<<<<< HEAD
   IconLayoutDashboard,
+=======
+>>>>>>> ca38e08 (change the namez)
   IconTableColumn,
 } from "@tabler/icons-react";
 import React from "react";
@@ -61,7 +64,7 @@ export default function AppShellLayout({
       <AppShell.Header>
         <Group h="100%" px="md">
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          <Text fw={700}>MyApp</Text>
+          <Text fw={700}>Directories of Das Datasets</Text>
         </Group>
       </AppShell.Header>
 
