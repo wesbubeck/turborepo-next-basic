@@ -1,5 +1,6 @@
 "use client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { MantineProvider } from "@mantine/core";
 
 export default function LayoutWrapper({
   children,
@@ -14,6 +15,10 @@ export default function LayoutWrapper({
     },
   });
   return (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
+      <MantineProvider defaultColorScheme="dark">
+        {children}
+      </MantineProvider>
+    </QueryClientProvider>
   );
 }

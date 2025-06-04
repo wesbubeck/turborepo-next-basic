@@ -31,3 +31,20 @@ model Post {
   authorId  String
   author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
 }
+
+model Dataset {
+  id             String        @id @default(cuid())
+  name           String
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  datasetGroupId String?
+  datasetGroup   DatasetGroup? @relation(fields: [datasetGroupId], references: [id])
+}
+
+model DatasetGroup {
+  id        String    @id @default(cuid())
+  name      String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  datasets  Dataset[]
+}
